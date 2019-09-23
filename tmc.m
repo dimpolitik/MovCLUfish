@@ -3,7 +3,7 @@ function [centroids, sil] = tmc(x,y,tstart,tfinish,N,M,map_range)
 % Function:
 % Tracking Moving Centroids (TMC)
 % Aim: 
-% Centroid clustering of individuals with SOM and visualization of their shift 
+% Centroid clustering of fish tracks with SOM 
 % -------------------------------------------------------------------------
 % Input: 
 % x,y: fish locations (lon, lat) with dimensions: (#individuals, time) 

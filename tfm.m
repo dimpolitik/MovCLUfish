@@ -1,7 +1,7 @@
 function [mob mobr mobl] = tfm(index,x,y,tstart,tfinish,N,M,map_range)
 % -------------------------------------------------------------------------
 % Aim: 
-% Tracking of fish mobility between clusters
+% Tracking of fish mobility between moving clusters
 % -------------------------------------------------------------------------
 % Inputs:
 % index: the studied class; index takes values from 1 to 
@@ -88,6 +88,7 @@ for itime = tstart:tfinish
    axis([map_range(1) map_range(2) map_range(3) map_range(4)]) 
    x0 = 80; y0 = 80; width = 550; height = 300;
    set(gcf,'units','points','position',[x0,y0,width,height]);
+   set(gca, 'FontSize', 14)
    hold on 
    str=sprintf('Time - %d', itime); 
    title(str)
