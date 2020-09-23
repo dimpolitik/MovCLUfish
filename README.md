@@ -8,6 +8,7 @@ The repository includes:
 * Source code in Matlab for implementing MovCLUFish
 * Source code in R for implementing MovCLUFish
 
+![Farmers Market Finder Demo](demo.gif)
 
 ## scripts
 
