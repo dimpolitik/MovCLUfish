@@ -14,7 +14,17 @@ The repository includes:
 
 ### Tracking Moving Centroids (TMC)
 
-* **tmc.m**: compute the cenroids clusters of fish tracks using SOM.
+- tmc.m: compute the cenroids clusters of fish tracks using SOM.
+
+% Inputs:
+  
+% Outputs: 
+% 1. centroids: centroids of clusters
+% 2. sil: silouette coefficients 
+% -------------------------------------------------------------------------
+% Example of use:
+% [centroids, sil] = tmc(x,y,1,20,3,2,[22 26.5 39 41.2]);
+% See also visualize_tcm.m example for ploting the centroids
 
 * **visualize_tmc.m**: plot the centroid clusters generated from tmc.m and their shift.
 
