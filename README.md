@@ -12,19 +12,19 @@ The repository includes:
 
 ## Functions
 
-# Tracking Moving Centroids (TMC)
+### Tracking Moving Centroids (TMC)
 
 * **tmc.m**: compute the cenroids clusters of fish tracks using SOM.
 
 * **visualize_tmc.m**: plot the centroid clusters generated from tmc.m and their shift.
 
-# Aggregating Moving Clusters (AMC)
+### Aggregating Moving Clusters (AMC)
 
 * **amc.m**: compute the surface baf area of moving clusters with SOM.
 
 * **visualize_amc_bagplot.m**: visualize bagplots of moving clusters at specific timestamps.
 
-# Tracking Fish Mobility (TFM). 
+### Tracking Fish Mobility (TFM). 
 
 * **tfm.m**: tracking of fish mobility between moving clusters
 
