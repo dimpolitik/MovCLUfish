@@ -1,5 +1,13 @@
 # MovCLUfish
-A tool for discovering fish movement patterns from individual-based models using data mining
+A tool for visualising fish movement patterns from individual-based models using data mining. It's based on the paper
+
+•	Politikos, D.V., Kleftogiannis, D., Tsiaras, K. Rose, K. MovCLUFish: A data mining tool for discovering novel fish movement patterns from individual-based models (under review).
+
+The repository includes:
+
+* Source code in Matlab for implementing MovCLUFish
+* Source code in R for implementing MovCLUFish
+
 
 ## scripts
 
