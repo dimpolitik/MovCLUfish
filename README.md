@@ -34,13 +34,14 @@ To run the Matlab version of MovCLUfish,
 
 ### Tracking Moving Centroids (TMC)
 
-TMC is run through the tmc.m file.  
+TMC is run through the *tmc.m* and *visualise_tmc.m* files. 
+Please the source files for  
 
-% Inputs:
-  
 % Example of use:
-% [centroids, sil] = tmc(x,y,1,20,3,2,[22 26.5 39 41.2]);
-% See also visualize_tcm.m example for ploting the centroids
+load import_fish_tracks;
+[centroids, sil] = tmc(fish_lon,fish_lat,1,20,3,2,[22 26.5 39 41.2]);
+visualise_tmc(centroids, sil,2,3,[22 26.5 39 41.2]); % including map
+visualise_tmc(centroids, sil,2,3); % without a map
 
 * **visualize_tmc.m**: plot the centroid clusters generated from tmc.m and their shift.
 
