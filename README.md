@@ -39,8 +39,10 @@ Please the source files for
 
 % Example of use:
 load import_fish_tracks;
-[centroids, sil] = tmc(fish_lon,fish_lat,1,20,3,2,[22 26.5 39 41.2]); \n
-visualise_tmc(centroids, sil,2,3,[22 26.5 39 41.2]); % including map \n
+[centroids, sil] = tmc(fish_lon,fish_lat,1,20,3,2,[22 26.5 39 41.2]); 
+
+visualise_tmc(centroids, sil,2,3,[22 26.5 39 41.2]); % including map 
+
 visualise_tmc(centroids, sil,2,3); % without a map
 
 * **visualize_tmc.m**: plot the centroid clusters generated from tmc.m and their shift.
