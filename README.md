@@ -35,6 +35,7 @@ To run the Matlab version of MovCLUfish, please make *Matlab* folder in the pres
 * **Tracking Moving Centroids (TMC)**
 
 TMC method is run through the *tmc.m* and *visualise_tmc.m* files. 
+
 Please explore the source files for understanding the main inputs and outputs of the functions built in.   
 
 % Example of use:\
@@ -46,6 +47,7 @@ visualise_tmc(centroids, sil,2,3); % without a map
 * **Aggregating Moving Clusters (AMC)**
 
 AMC method is run through the *amc.m* and *visualise_amc.m* files. 
+
 Please explore the source files for understanding the main inputs and outputs of the functions built in.   
 
 % Example of use:\
@@ -57,6 +59,7 @@ visualize_amc(fish_lon,fish_lat,10,3,2) % without a map <br/>
 * **Tracking Fish Mobility (TFM)** 
 
 TFM method is run through the *tfm.m* file. 
+
 Please explore the source file for understanding the main inputs and outputs of the functions built in.  
 
 load import_fish_tracks<br/>
