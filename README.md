@@ -9,11 +9,11 @@ MovCLUfish is configured to identify features of fish behavior related to occupa
 
 The clusters are analyzed using three built-in pattern mining methods
 
-** Tracking Moving Centroids (TMC):  TMC aims to detects shifts in the distribution of fish over time.
+* Tracking Moving Centroids (TMC):  TMC aims to detects shifts in the distribution of fish over time.
 
-** Aggregating Moving Clusters (AMC): AMC visualizes the way fish aggregations change geographically over time, 
+* Aggregating Moving Clusters (AMC): AMC visualizes the way fish aggregations change geographically over time, 
 
-** Tracking Fish Mobility (TFM): TFM provides quantitative information on the patterns of exchange and connectivity of fish individuals among regions within the domain. 
+* Tracking Fish Mobility (TFM): TFM provides quantitative information on the patterns of exchange and connectivity of fish individuals among regions within the domain. 
 
 The repository includes:
 
