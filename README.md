@@ -39,7 +39,7 @@ TMC method is run through the *tmc.m* and *visualise_tmc.m* files.
 Please explore the source files for understanding the main inputs and outputs of the functions built in.   
 
 % Example of use:\
-load import_fish_tracks\
+load import_fish_tracks;\
 [centroids, sil] = tmc(fish_lon,fish_lat,1,20,3,2,[22 26.5 39 41.2])\
 visualise_tmc(centroids, sil,2,3,[22 26.5 39 41.2]); % including map<br/>
 visualise_tmc(centroids, sil,2,3); % without a map
@@ -51,7 +51,7 @@ AMC method is run through the *amc.m* and *visualise_amc.m* files.
 Please explore the source files for understanding the main inputs and outputs of the functions built in.   
 
 % Example of use:\
-load import_fish_tracks\
+load import_fish_tracks;\
 bag_area = amc(fish_lon,fish_lat,1,10,3,2)<br/>
 visualize_amc(fish_lon,fish_lat,10,3,2,[22 27 39 41.2]) % including map<br/>
 visualize_amc(fish_lon,fish_lat,10,3,2) % without a map <br/>
@@ -62,7 +62,7 @@ TFM method is run through the *tfm.m* file.
 
 Please explore the source file for understanding the main inputs and outputs of the functions built in.  
 
-load import_fish_tracks<br/>
+load import_fish_tracks;<br/>
 [mob, mob_right, mob_left] = tfm(3,fish_lon,fish_lat,1,20,3,2,[22 27 39 41.2]);
 
 ## R version of MovCLUfish
