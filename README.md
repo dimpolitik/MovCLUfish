@@ -30,12 +30,12 @@ Initially, anchovy individuals were uniformly distributed in the coastal regions
 
 ## Matlab version of MovCLUfish
 
-To run the Matlab version of MovCLUfish, 
+To run the Matlab version of MovCLUfish, please make *Matlab* folder as the working directory.
 
-### Tracking Moving Centroids (TMC)
+** Tracking Moving Centroids (TMC) **
 
 TMC is run through the *tmc.m* and *visualise_tmc.m* files. 
-Please the source files for  
+Please explore the source files for understanding the main inputs and outputs of the functions built i   
 
 % Example of use:\
 load import_fish_tracks\
