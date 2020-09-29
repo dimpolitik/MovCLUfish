@@ -32,10 +32,10 @@ Initially, anchovy individuals were uniformly distributed in the coastal regions
 
 To run the Matlab version of MovCLUfish, please make *Matlab* folder as the working directory.
 
-** Tracking Moving Centroids (TMC) **
+**Tracking Moving Centroids (TMC)**
 
-TMC is run through the *tmc.m* and *visualise_tmc.m* files. 
-Please explore the source files for understanding the main inputs and outputs of the functions built i   
+TMC method is run through the *tmc.m* and *visualise_tmc.m* files. 
+Please explore the source files for understanding the main inputs and outputs of the functions built in.   
 
 % Example of use:\
 load import_fish_tracks\
@@ -43,17 +43,24 @@ load import_fish_tracks\
 visualise_tmc(centroids, sil,2,3,[22 26.5 39 41.2]); % including map<br/>
 visualise_tmc(centroids, sil,2,3); % without a map
 
-* **visualize_tmc.m**: plot the centroid clusters generated from tmc.m and their shift.
+**Aggregating Moving Clusters (AMC)**
 
-### Aggregating Moving Clusters (AMC)
+AMC method is run through the *amc.m* and *visualise_amc.m* files. 
+Please explore the source files for understanding the main inputs and outputs of the functions built in.   
 
-* **amc.m**: compute the surface baf area of moving clusters with SOM.
+% Example of use:\
+load import_fish_tracks\
+bag_area = amc(fish_lon,fish_lat,1,10,3,2)<br/>
+visualize_amc(fish_lon,fish_lat,10,3,2,[22 27 39 41.2]) % including map<br/>
+visualize_amc(fish_lon,fish_lat,10,3,2) % without a map <br/>
 
-* **visualize_amc_bagplot.m**: visualize bagplots of moving clusters at specific timestamps.
+**Tracking Fish Mobility (TFM)** 
 
-### Tracking Fish Mobility (TFM). 
+TFM method is run through the *tfm.m* file. 
+Please explore the source file for understanding the main inputs and outputs of the functions built in.  
 
-* **tfm.m**: tracking of fish mobility between moving clusters
+load import_fish_tracks;
+[mob, mob_right, mob_left] = tfm(3,fish_lon,fish_lat,1,20,3,2,[22 27 39 41.2]);
 
 ## References
 
