@@ -14,14 +14,14 @@ function [mob mobr mobl] = tfm(index,x,y,tstart,tfinish,N,M,map_range)
 % Output: 
 % mob: matrix presenting the number of individuals in the index cluster and
 % surrounding clusters for each timestamp of processing time
-% mobr: average proportion of individuals moving to suurounding clusters  
+% mob_right: average proportion of individuals moving to suurounding clusters  
 % to the right side
-% mobl: average proportion of individuals moving to surrounding clusters 
+% mob_left: average proportion of individuals moving to surrounding clusters 
 % to the left side
 % -------------------------------------------------------------------------
 % Example of use:
 % load import_fish_tracks;
-% [mob, mov_right, mov_left] = tfm(3,fish_lon,fish_lat,1,20,3,2,[22 27 39 41.2]);
+% [mob, mob_right, mob_left] = tfm(3,fish_lon,fish_lat,1,20,3,2,[22 27 39 41.2]);
 % -------------------------------------------------------------------------
 % References:
 % https://www.mathworks.com/help/deeplearning/gs/cluster-data-with-a-self-organizing-map.html
@@ -45,7 +45,12 @@ net_init = net(init');
 cidx = vec2ind(net_init);
 number_of_clusters = max(cidx);
 
-% Here is the cluster tetsted for its mobility to other clusters
+if (index > N * M)
+    disp('index should be smaller than', N*M)
+
+end
+
+% Here is the cluster tested for its mobility to other clusters
 study_class = (find(cidx == index));
 study_class_plot = init(find(cidx == index),:);
 

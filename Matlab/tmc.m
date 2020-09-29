@@ -1,4 +1,4 @@
-function [centroids, sil] = tmc(x,y,tstart,tfinish,N,M,map_range)
+function [centroids, sil] = tmc(x,y,tstart,tfinish,N,M)
 % -------------------------------------------------------------------------
 % Function:
 % Tracking Moving Centroids (TMC)
@@ -6,24 +6,25 @@ function [centroids, sil] = tmc(x,y,tstart,tfinish,N,M,map_range)
 % Centroid clustering of fish tracks with SOM 
 % -------------------------------------------------------------------------
 % Input: 
-% x,y: fish locations (lon, lat) with dimensions: (#individuals, time) 
-% tstart,tfinish: initial and last timestamp of processing time
-% N,M: dimension of SOM grid
-% map_range: range of model domain in [lon_min lon_max lat_min lat_max]
+% 1. x,y: fish locations (lon, lat) with dimensions: (#individuals, time) 
+% 2. tstart,tfinish: initial and last timestamp of processing time
+% 3. N,M: dimension of SOM grid
 % -------------------------------------------------------------------------
 % Outputs: 
 % 1. centroids: centroids of clusters
 % 2. sil: silouette coefficients 
 % -------------------------------------------------------------------------
 % Example of use:
-% [centroids, sil] = tmc(x,y,1,20,3,2,[22 26.5 39 41.2]);
-% See also visualize_tcm.m example for ploting the centroids
+% load import_fish_tracks;
+% [centroids, sil] = tmc(fish_lon,fish_lat,1,20,3,2,[22 26.5 39 41.2]);
+% See also visualize_tmc.m example for ploting the centroids and silhouette
 % -------------------------------------------------------------------------
 % References:
 % [1] Rousseeuw P.J, 1987. "Silhouettes: a Graphical Aid to the Interpretation 
-% and Validation of Cluster Analysis". Computational and Applied 
-% Mathematics 20, 53-65.
+% and Validation of Cluster Analysis". Computational and Applied Mathematics 20, 53-65.
 % [2] https://www.mathworks.com/help/deeplearning/gs/cluster-data-with-a-self-organizing-map.html
+% [3] Politikos, D.V., Kleftogiannis, D., Tsiaras, K., Rose K. 2020. MovCLUFish: A data mining 
+% tool for discovering novel fish movement patterns from individual-based models.
 % -------------------------------------------------------------------------
 % Written by:
 % Dimitrios Kleftogiannis
@@ -75,7 +76,7 @@ y1  =  net(all_ctrs');
 cidxC  =  vec2ind(y1);
 ctrsC = zeros(number_of_clusters,2);
 
-% Compute the centers of each cluster
+% Compute the centroids of each cluster
 clusters = cell(number_of_clusters,1);
 for k = 1:number_of_clusters
    temp_class = (find(cidxC == k));

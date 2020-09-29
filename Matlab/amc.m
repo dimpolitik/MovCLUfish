@@ -3,7 +3,7 @@ function y = amc(x,y,tstart,tfinish,N,M)
 % Function:
 % Aggregation of Moving Clusters (AMC)
 % Aim: 
-% Compute the the surface bag area of moving clusters
+% Compute the surface bag area of moving clusters
 % -------------------------------------------------------------------------
 % Input: 
 % x,y: fish locations (lon, lat), dimensions: (time, #individuals) 
@@ -11,17 +11,17 @@ function y = amc(x,y,tstart,tfinish,N,M)
 % N,M: dimension of SOM grid
 % -------------------------------------------------------------------------
 % Output: 
-% Surface of bagplots over a time period
+% Surface of bagplots derived from clusters over a time period
 % -------------------------------------------------------------------------
 % Example of use:
 % load import_fish_tracks;
-% bag_area = amc(fish_lon,fish_lat,1,30,3,2)
-% plot(bag_area, '.-', 'MarkerSize', 24); 
-% xlabel('Time'); ylabel('Surface of bag area')
+% bag_area = amc(fish_lon,fish_lat,1,10,3,2)
 % -------------------------------------------------------------------------
 % References:
-% Rousseeuw, P.J., Ruts, I., Tukey, J.W., 1999. The Bagplot: 
+% [1] Rousseeuw, P.J., Ruts, I., Tukey, J.W., 1999. The Bagplot: 
 % A Bivariate Boxplot. Am. Stat. 53(4), 382-387.
+% [2] Politikos, D.V., Kleftogiannis, D., Tsiaras, K., Rose K. 2020. MovCLUFish: A data mining 
+% tool for discovering novel fish movement patterns from individual-based models.
 % -------------------------------------------------------------------------
 % Written by:
 % Dimitris Politikos
@@ -57,4 +57,7 @@ for itime = tstart:tfinish
    end
     bag_area(itime) = totarea;
 end
+plot(bag_area, '.-', 'MarkerSize', 24); 
+xlabel('Time'); ylabel('Surface of bag area')
+set(gca, 'fontsize',12)
 y = bag_area;

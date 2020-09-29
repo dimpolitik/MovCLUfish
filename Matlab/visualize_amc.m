@@ -1,21 +1,21 @@
-function visualize_amc_bagplot(x,y,t,N,M,map_range)
+function visualize_amc(x,y,t,N,M,map_range)
 % -------------------------------------------------------------------------
 % Aim: 
-% Visualize bagplots at specific timestamps
+% Visualize bagplots of moving clusters at specific timestamps
 % -------------------------------------------------------------------------
 % Input: 
 % x,y: fish locations (lon, lat) with dimensions: (#individuals, time) 
 % t: timestamps to visualize bagplots
 % N,M: dimension of SOM grid
-% map_range: range of model domain in [lon_min lon_max lat_min lat_max]
+% map_range (optional): range of model domain in [lon_min lon_max lat_min lat_max]
 % -------------------------------------------------------------------------
 % Output: 
 % Plot of bagplots (bag and fence)
 % -------------------------------------------------------------------------
 % Example of use:
 % load import_fish_tracks;
-% visualize_amc_bagplot(fish_lon,fish_lat,10,3,2,[22 27 39 41.2])
-% visualize_amc_bagplot(fish_lon,fish_lat,[1 10 20 100],3,2,[22 27 39 41.2])
+% visualize_amc(fish_lon,fish_lat,10,3,2,[22 27 39 41.2])
+% visualize_amc(fish_lon,fish_lat,[1 10 20 100],3,2,[22 27 39 41.2])
 % -------------------------------------------------------------------------
 % References:
 % Rousseeuw, P.J., Ruts, I., Tukey, J.W., 1999. The Bagplot: 
@@ -50,12 +50,16 @@ for itime = 1:length(t)
          hold on
       end
    end 
-   % plot_map  
+   
    hold on
+   % plot_map (optional)
+   if exist('map_range','var')
    land = shaperead('landareas', 'UseGeoCoords', true);
    geoshow(gca, land, 'FaceColor', [0.5 0.5 0.5]);
    box on
    axis([map_range(1) map_range(2) map_range(3) map_range(4)]) 
+   end
    str=sprintf('Time - %d', day_index); 
    title(str)
+   set(gca, 'fontsize',12)
 end
