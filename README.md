@@ -30,7 +30,7 @@ Initially, anchovy individuals were uniformly distributed in the coastal regions
 
 ## Matlab version of MovCLUfish
 
-To run the Matlab version of MovCLUfish, please make *Matlab* folder as the working directory.
+To run the Matlab version of MovCLUfish, please make *Matlab* folder in the present repository as the working directory.
 
 * **Tracking Moving Centroids (TMC)**
 
