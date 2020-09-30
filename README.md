@@ -62,6 +62,7 @@ TFM method is run through the *tfm.m* file.
 
 Please explore the source file for understanding the main inputs and outputs of the functions built in.  
 
+% Example of use:\
 load import_fish_tracks;<br/>
 [mob, mob_right, mob_left] = tfm(3,fish_lon,fish_lat,1,20,3,2,[22 27 39 41.2]);
 
