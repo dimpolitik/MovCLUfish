@@ -67,6 +67,13 @@ load import_fish_tracks;<br/>
 [mob, mob_right, mob_left] = tfm(3,fish_lon,fish_lat,1,20,3,2,[22 27 39 41.2]);
 
 ## R version of MovCLUfish
+To run the R version of MovCLUfish, the following packages need to ne installed in R,
+
+* install.packages("kohonen")
+* install.packages("cluster")
+* install.packages("aplpack")   
+* install.packages("pracma")
+
 
 ## References
 
