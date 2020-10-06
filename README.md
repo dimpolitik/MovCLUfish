@@ -71,6 +71,8 @@ To run the R version of MovCLUfish, the following packages need to be installed 
 
 R.matlab, kohonen, cluster, aplpack and pracma
 
+Also, please make R folder found in the present repository, as the current working directory.
+
 * **Tracking Moving Centroids (TMC)**
 
 TMC method is run through the *tmc.r* and *visualise_tmc.r* files. 
