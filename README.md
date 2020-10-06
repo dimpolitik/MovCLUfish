@@ -36,7 +36,7 @@ To run the Matlab version of MovCLUfish, please make *Matlab* folder in the pres
 
 TMC method is run through the *tmc.m* and *visualise_tmc.m* files. 
 
-Please explore the source files for understanding the main inputs and outputs of the functions built in.   
+Please explore the source files for understanding the main inputs and outputs of the functions.   
 
 % Example of use:\
 load import_fish_tracks;\
@@ -48,7 +48,7 @@ visualise_tmc(centroids, sil,2,3); % without a map
 
 AMC method is run through the *amc.m* and *visualise_amc.m* files. 
 
-Please explore the source files for understanding the main inputs and outputs of the functions built in.   
+Please explore the source files for understanding the main inputs and outputs of the functions.   
 
 % Example of use:\
 load import_fish_tracks;\
@@ -60,7 +60,7 @@ visualize_amc(fish_lon,fish_lat,10,3,2) % without a map <br/>
 
 TFM method is run through the *tfm.m* file. 
 
-Please explore the source file for understanding the main inputs and outputs of the functions built in.  
+Please explore the source file for understanding the main inputs and outputs of the functions.  
 
 % Example of use:\
 load import_fish_tracks;<br/>
@@ -74,6 +74,36 @@ To run the R version of MovCLUfish, the following packages need to ne installed 
 * install.packages("aplpack")   
 * install.packages("pracma")
 
+* **Tracking Moving Centroids (TMC)**
+
+TMC method is run through the *tmc.r* and *visualise_tmc.r* files. 
+
+Please explore the source files for understanding the main inputs and outputs of the function.   
+
+# Example of use:
+fish= readMat('import_fish_tracks.mat')\
+fish_out = tmc(fish$fish.lon, fish$fish.lat, 1, 50, 3,2)\
+
+* **Aggregating Moving Clusters (AMC)**
+
+AMC method is run through the *amc.r* and *visualise_amc.r* files. 
+
+Please explore the source files for understanding the main inputs and outputs of the functions.   
+
+fish = readMat('import_fish_tracks.mat')
+bag_area = amc(fish$fish_lon,fish$fish_lat,1,30,3,2)
+visualize_amc(fish$ish_lon,fish$fish_lat,1,3,2]) # one timestamp\
+visualize_amc(fish$fish_lon,fish$fish_lat,c(1, 10, 20),3,2) # multiple timestamps\
+
+* **Tracking Fish Mobility (TFM)** 
+
+TFM method is run through the *tfm.r* file. 
+
+Please explore the source file for understanding the main inputs and outputs of the function.  
+
+% Example of use:\
+load import_fish_tracks;<br/>
+[mob, mob_right, mob_left] = tfm(3,fish_lon,fish_lat,1,20,3,2,[22 27 39 41.2]);
 
 ## References
 
