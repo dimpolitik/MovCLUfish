@@ -68,6 +68,7 @@ load import_fish_tracks;<br/>
 
 ## R version of MovCLUfish
 To run the R version of MovCLUfish, the following packages need to be installed in R: 
+
 R.matlab, kohonen, cluster, aplpack and pracma
 
 * **Tracking Moving Centroids (TMC)**
