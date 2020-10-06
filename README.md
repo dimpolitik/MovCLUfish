@@ -69,10 +69,10 @@ load import_fish_tracks;<br/>
 ## R version of MovCLUfish
 To run the R version of MovCLUfish, the following packages need to ne installed in R,
 
-* install.packages("kohonen")
-* install.packages("cluster")
-* install.packages("aplpack")   
-* install.packages("pracma")
+- install.packages("kohonen")\
+- install.packages("cluster")\
+- install.packages("aplpack")\   
+- install.packages("pracma")\
 
 * **Tracking Moving Centroids (TMC)**
 
@@ -80,7 +80,7 @@ TMC method is run through the *tmc.r* and *visualise_tmc.r* files.
 
 Please explore the source files for understanding the main inputs and outputs of the function.   
 
-# Example of use:
+Example of use:\
 fish= readMat('import_fish_tracks.mat')\
 fish_out = tmc(fish$fish.lon, fish$fish.lat, 1, 50, 3,2)\
 
@@ -90,8 +90,9 @@ AMC method is run through the *amc.r* and *visualise_amc.r* files.
 
 Please explore the source files for understanding the main inputs and outputs of the functions.   
 
-fish = readMat('import_fish_tracks.mat')
-bag_area = amc(fish$fish_lon,fish$fish_lat,1,30,3,2)
+Example of use:\
+fish = readMat('import_fish_tracks.mat')\
+bag_area = amc(fish$fish_lon,fish$fish_lat,1,30,3,2)\
 visualize_amc(fish$ish_lon,fish$fish_lat,1,3,2]) # one timestamp\
 visualize_amc(fish$fish_lon,fish$fish_lat,c(1, 10, 20),3,2) # multiple timestamps\
 
@@ -101,9 +102,7 @@ TFM method is run through the *tfm.r* file.
 
 Please explore the source file for understanding the main inputs and outputs of the function.  
 
-% Example of use:\
-load import_fish_tracks;<br/>
-[mob, mob_right, mob_left] = tfm(3,fish_lon,fish_lat,1,20,3,2,[22 27 39 41.2]);
+Example of use:\
 
 ## References
 
