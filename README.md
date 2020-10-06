@@ -69,10 +69,7 @@ load import_fish_tracks;<br/>
 ## R version of MovCLUfish
 To run the R version of MovCLUfish, the following packages need to ne installed in R,
 
-- install.packages("kohonen")\
-- install.packages("cluster")\
-- install.packages("aplpack")\   
-- install.packages("pracma")\
+install.packages("kohonen"), install.packages("cluster"), install.packages("aplpack"), install.packages("pracma")
 
 * **Tracking Moving Centroids (TMC)**
 
@@ -82,7 +79,7 @@ Please explore the source files for understanding the main inputs and outputs of
 
 Example of use:\
 fish= readMat('import_fish_tracks.mat')\
-fish_out = tmc(fish$fish.lon, fish$fish.lat, 1, 50, 3,2)\
+fish_out = tmc(fish$fish.lon, fish$fish.lat, 1, 50, 3,2)
 
 * **Aggregating Moving Clusters (AMC)**
 
@@ -94,7 +91,7 @@ Example of use:\
 fish = readMat('import_fish_tracks.mat')\
 bag_area = amc(fish$fish_lon,fish$fish_lat,1,30,3,2)\
 visualize_amc(fish$ish_lon,fish$fish_lat,1,3,2]) # one timestamp\
-visualize_amc(fish$fish_lon,fish$fish_lat,c(1, 10, 20),3,2) # multiple timestamps\
+visualize_amc(fish$fish_lon,fish$fish_lat,c(1, 10, 20),3,2) # multiple timestamps
 
 * **Tracking Fish Mobility (TFM)** 
 
