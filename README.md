@@ -69,7 +69,7 @@ load import_fish_tracks;<br/>
 ## R version of MovCLUfish
 To run the R version of MovCLUfish, the following packages need to ne installed in R,
 
-install.packages("kohonen"), install.packages("cluster"), install.packages("aplpack"), install.packages("pracma")
+install.packages("R.matlab"), install.packages("kohonen"), install.packages("cluster"), install.packages("aplpack"), install.packages("pracma")
 
 * **Tracking Moving Centroids (TMC)**
 
@@ -87,7 +87,7 @@ AMC method is run through the *amc.r* and *visualise_amc.r* files.
 
 Please explore the source files for understanding the main inputs and outputs of the functions.   
 
-Example of use:\
+Examples of use:\
 fish = readMat('import_fish_tracks.mat')\
 bag_area = amc(fish$fish_lon,fish$fish_lat,1,30,3,2)\
 visualize_amc(fish$ish_lon,fish$fish_lat,1,3,2]) # one timestamp\
