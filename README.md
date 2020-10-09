@@ -93,7 +93,7 @@ Please explore the source files for understanding the main inputs and outputs of
 Examples of use:\
 fish = readMat('import_fish_tracks.mat')\
 bag_area = amc(fish$fish_lon,fish$fish_lat,1,30,3,2)\
-visualize_amc(fish$ish_lon,fish$fish_lat,1,3,2]) # one timestamp\
+visualize_amc(fish$fish_lon,fish$fish_lat,1,3,2]) # one timestamp\
 visualize_amc(fish$fish_lon,fish$fish_lat,c(1, 10, 20),3,2) # multiple timestamps
 
 * **Tracking Fish Mobility (TFM)** 
