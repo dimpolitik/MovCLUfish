@@ -98,11 +98,7 @@ visualize_amc(fish$fish_lon,fish$fish_lat,c(1, 10, 20),3,2) # multiple timestamp
 
 * **Tracking Fish Mobility (TFM)** 
 
-TFM method is run through the *tfm.r* file. 
-
-Please explore the source file for understanding the main inputs and outputs of the function.  
-
-Example of use:
+In progress ...
 
 ## References
 
