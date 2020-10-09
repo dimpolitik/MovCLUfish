@@ -82,6 +82,7 @@ Please explore the source files for understanding the main inputs and outputs of
 Example of use:\
 fish= readMat('import_fish_tracks.mat')\
 fish_out = tmc(fish$fish.lon, fish$fish.lat, 1, 50, 3,2)
+visualize_tmc(fish$fish.lon, fish$fish.lat, fish_out$centroids, fish_out$silhouette, 3, 2)
 
 * **Aggregating Moving Clusters (AMC)**
 
