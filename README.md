@@ -102,7 +102,7 @@ In progress ...
 
 ## References
 
-[1] Politikos, D.V., Kleftogiannis, D., Tsiaras, K. Rose, K. MovCLUFish: A data mining tool for discovering novel fish movement patterns from individual-based models (under review).
+[1] Politikos, D.V., Kleftogiannis, D., Tsiaras, K. Rose, K. 2021. MovCLUFish: A data mining tool for discovering novel fish movement patterns from individual-based models. Limnology and Oceanography:Methods 19(4), 267-279. https://doi.org/10.1002/lom3.10421.
 
 [2] Politikos, D. V., S. Somarakis, K. Tsiaras, M. Giannoulaki, G. Petihakis, A. Machias, and G. 
 Triantafyllou. 2015. Simulating anchovy's full life cycle in the eastern Mediterranean: a  coupled hydrobiogeochemical-IBM model. Progr. Oceanogr. 138: 399-416 doi:10.1016/j.pocean.2014.09.002
